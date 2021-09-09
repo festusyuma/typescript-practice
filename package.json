@@ -2,10 +2,12 @@
   "name": "typescript-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.ts"
+    "dev": "npm run build && nodemon dist/index.js",
+    "start": "npm run build && node dist/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/festusyuma/typescript-practice/issues"
   },
-  "homepage": "https://github.com/festusyuma/typescript-practice#readme"
+  "homepage": "https://github.com/festusyuma/typescript-practice#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
